@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breast Cancer Awareness 🎗️</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            transition: background 0.5s, color 0.5s;
+        }
+        .hero {
+            height: 90vh;
+            background: url('https://source.unsplash.com/1600x900/?breastcancer') no-repeat center center/cover;
+            position: relative;
+        }
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .hero div {
+            position: relative;
+            z-index: 2;
+        }
+        .dark-mode {
+            background-color: #1e1e1e;
+            color: #f5f5f5;
+        }
+        .navbar-brand {
+            font-weight: bold;
+            color: #ff4081 !important;
+        }
+        .btn-primary {
+            background: #ff4081;
+            border: none;
+        }
+        .btn-primary:hover {
+            background: #d81b60;
+        }
+        footer {
+            background: #ff4081;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">🎗️ Breast Cancer Awareness</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">🏠 Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="prevention.html">🛡 Prevention</a></li>
+                    <li class="nav-item"><a class="nav-link" href="causes.html">⚠️ Causes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="hospitals.html">🏥 Hospitals</a></li>
+                    <li class="nav-item"><a class="nav-link" href="research.html">📚 Research</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero text-center text-white d-flex align-items-center justify-content-center">
+        <div>
+            <h1 class="fw-bold">🎗️ Fight Breast Cancer Together</h1>
+            <p class="fs-5">Empowering knowledge, prevention, and early detection.</p>
+            <button class="btn btn-primary mt-3" onclick="toggleDarkMode()">🌙 Toggle Dark Mode</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center p-3">
+        <p>&copy; 2025 Breast Cancer Awareness. All Rights Reserved. 🎗️</p>
+    </footer>
+
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+    </script>
+</body>
+</html>
